@@ -1,0 +1,267 @@
+/* questions.css - Tối ưu hóa toàn bộ với màu Tím/Xanh Ngọc và hiệu ứng động */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    background-color: #f7f3ff; /* Nền tím rất nhạt */
+    color: #333;
+    line-height: 1.5;
+    font-size: 1.2em;
+}
+
+/* --- 1. Header & Typography --- */
+
+header {
+    display: block;
+    background-color: #5e35b1; /* Tím Hoàng Gia */
+    padding: 15px 0;
+    border-bottom: 5px solid #00bcd4; /* Xanh Ngọc Nhạt nổi bật */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    font-weight: 300;
+    padding: 1.5em; 
+    color: white; 
+    text-shadow: none; 
+    font-size: 2.2em;
+    width: 1200px; 
+    max-width: 90%;
+    margin: auto;
+}
+
+/* --- 2. Navigation (Hiệu ứng động) --- */
+
+nav {
+    background-color: #4527a0; /* Tím đậm hơn */
+}
+
+nav ul {
+    display: flex; 
+    width: 1200px; 
+    max-width: 90%;
+    margin: auto;
+    list-style: none;
+    justify-content: flex-start;
+}
+
+nav li {
+    padding: 1em 1.5em;
+    transition: background-color 0.3s; /* HIỆU ỨNG ĐỘNG: Chuyển màu nền */
+}
+
+nav li:hover {
+    background-color: #5e35b1; /* Tím sáng hơn khi hover */
+}
+
+nav a {
+    color: white; 
+    text-decoration: none;
+    font-weight: 500;
+}
+nav a:hover {color: #00bcd4;} /* Xanh Ngọc khi hover */
+
+/* --- 3. Main Content Area --- */
+
+main {
+    overflow: auto; 
+    min-height: 50vh; 
+    background-color: white;
+    width: 1200px;
+    max-width: 90%;
+    margin: 20px auto;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Đổ bóng sâu hơn */
+}
+
+footer {
+    padding: 1.5em; 
+    background-color: #e3e1f0; /* Tím nhạt */
+    font-size: 0.9em;
+    text-align: center;
+    color: #796c99;
+}
+
+p {margin-bottom: 1em;}
+
+
+/* --- 4. Forms & Inputs --- */
+
+input, label, select, textarea {
+    display: block; 
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 1em;  
+    padding: 0.75em;
+    border: 1px solid #c9c9c9;
+    border-radius: 4px;
+    font-size: 1em;
+    transition: border-color 0.3s; /* HIỆU ỨNG ĐỘNG: Thay đổi màu border */
+}
+
+input:focus, textarea:focus {
+    border-color: #5e35b1; /* Border Tím khi focus */
+    box-shadow: 0 0 5px rgba(94, 53, 177, 0.5);
+    outline: none;
+}
+
+label {
+    padding: 0; 
+    margin: 0.5em 0;
+    font-weight: 600;
+    max-width: 100%;
+}
+
+input[type="submit"] {
+    display: inline-block;
+    width: auto;
+    padding: 0.75em 2em;
+    clear: both; 
+    font-size: 1em;
+    cursor: pointer;
+    background-color: #00bcd4; /* Xanh Ngọc làm nút Action */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    transition: background-color 0.3s, transform 0.1s; /* HIỆU ỨNG ĐỘNG: Khi nhấn */
+    margin-left: 0; 
+}
+
+input[type="submit"]:hover {
+    background-color: #00a8b9;
+}
+input[type="submit"]:active {
+    transform: scale(0.98); /* HIỆU ỨNG ĐỘNG: Nhấn chìm nút */
+}
+
+form {overflow: auto; clear: both; display: block;}
+
+
+/* --- 5. Blockquotes (Admin & Public - Hiệu ứng động) --- */
+
+/* Blockquote mặc định/Public */
+blockquote {
+    display: block; 
+    margin-bottom: 1em; 
+    border-bottom: 1px solid #e0e0e0; 
+    padding: 1em; 
+    transition: background-color 0.2s;
+}
+
+blockquote p {
+    font-size: 1.1em;
+    margin-bottom: 0.5em;
+}
+
+/* public-question-item (Kiểu nổi bật cho Public) */
+.public-question-item {
+    display: block; 
+    padding: 15px 20px;
+    margin: 15px 0;
+    background-color: #ffffff; 
+    border-left: 5px solid #00bcd4; /* Xanh Ngọc */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    border-bottom: none; 
+    transition: box-shadow 0.3s, transform 0.3s; /* HIỆU ỨNG ĐỘNG: Nâng lên khi hover */
+}
+.public-question-item:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+.public-question-item p {
+    margin-bottom: 0.5em;
+    padding-bottom: 0.5em; 
+}
+
+/* Class cho Admin để dùng Flexbox (Có hiệu ứng động) */
+.admin-question-item {
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px; 
+    padding: 15px;
+    background-color: #fcfcfc; 
+    border-left: 5px solid #5e35b1; /* Tím cho Admin */
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.3s, transform 0.3s; /* HIỆU ỨNG ĐỘNG: Nâng lên khi hover */
+}
+.admin-question-item:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: translateX(5px); /* Kéo mục sang phải một chút */
+    background-color: #fff;
+}
+
+.admin-question-item > div {
+    flex-grow: 1; 
+    padding-right: 20px;
+}
+
+.admin-question-item img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%; /* Ảnh tròn */
+    object-fit: cover;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+.admin-question-item form {
+    margin: 0 10px;
+    flex-shrink: 0;
+}
+
+/* Các nút Edit/Delete riêng trong Admin */
+.admin-question-item form input[type="submit"] {
+    background-color: #e74c3c; /* Màu đỏ cho Delete */
+}
+
+/* --- 6. Helper Classes --- */
+
+.errors {
+    padding: 1em; 
+    border: 1px solid #e74c3c; 
+    background-color: #fdedec; 
+    color: #e74c3c; 
+    margin-bottom: 20px; 
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+
+/* ...existing code... */
+blockquote.admin-question-item {
+  display: flex;         /* giữ layout flex */
+  align-items: center;
+  gap: 12px;
+}
+
+blockquote.admin-question-item > div {
+  flex: 1 1 auto;
+  min-width: 0;          /* quan trọng để con co lại không bị cắt */
+  white-space: normal !important;
+  overflow: visible !important;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+blockquote.admin-question-item small,
+blockquote.admin-question-item em {
+  white-space: normal !important;
+  overflow: visible !important;
+  word-break: break-word;
+}
+/* đảm bảo các button/link không chiếm flex space */
+blockquote.admin-question-item a,
+blockquote.admin-question-item form {
+  flex: 0 0 auto;
+}
+/* ...existing code... */

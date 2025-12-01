@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Login</title>
+    <link rel="stylesheet" href="../../questions.css"> 
+    
+    <style>
+        body {
+            /* Sử dụng Flexbox để căn giữa theo chiều ngang và dọc */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f7f3ff; /* Nền tím rất nhạt từ questions.css */
+            margin: 0;
+            padding: 0;
+            font-size: 1em; /* Khôi phục font-size cơ bản */
+        }
+
+        .login-container {
+            width: 400px;
+            max-width: 90%;
+            padding: 30px;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Đổ bóng sâu */
+            text-align: center;
+        }
+
+        .login-container h2 {
+            font-size: 1.8em;
+            color: #5e35b1; /* Tím Hoàng Gia */
+            margin-bottom: 25px;
+            font-weight: 300;
+        }
+        
+        .login-container p {
+            margin-bottom: 1.5em;
+            color: #666;
+        }
+        
+        .login-container label {
+            /* Ghi đè style mặc định để label hiển thị phía trên input */
+            display: block; 
+            text-align: left;
+            margin-bottom: 0.2em;
+            font-weight: 600;
+            color: #4527a0;
+        }
+        
+        .login-container input[type="password"] {
+            /* Kế thừa style từ questions.css và điều chỉnh width */
+            width: 100%;
+            max-width: 100%; /* Đảm bảo input chiếm hết chiều rộng container */
+            margin-bottom: 20px;
+        }
+        
+        .login-container input[type="submit"] {
+            /* Kế thừa style từ questions.css (Xanh Ngọc) và điều chỉnh width */
+            width: 100%;
+            max-width: none;
+            padding: 0.9em 2em; /* Nút lớn hơn */
+            font-size: 1.1em;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>🔒 Admin Login</h2>
+        <p>Please enter the password to access secure pages:</p>
+        
+        <form action="Validate.php" method="post">
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            
+            <input type="submit" value="Log In">
+        </form>
+    </div>
+</body>
+</html>
